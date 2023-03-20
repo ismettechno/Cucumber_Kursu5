@@ -1,0 +1,46 @@
+Maven
+1- Yeni projeye tıklattım-> Proje Tipi olarak MAVEN
+   seçildi.satandart sonlandırıldı.
+
+2- Klasör yapısını inceledik:
+   main -> Developer ın source kodları
+   test -> Testerın kodları
+
+3- Mavenın verdiği düzenli yapının kendi tarafımızda ,
+   bizde kendi düzenli klasör yapımızı oluşturacağız.
+   Klasörler
+
+   FeatureFiles   -> Senaryolarımızın olduğu klasör
+   StepDefinitions-> Senaryoların çalışan adımları - metodları burada olacak
+   Pages          -> Page Object Modell sayfalarımız POM (@FindBy)
+   Utilities      -> Driver ve diğer tekrar kullanılacak metodlarımız
+   Runners        -> Çalıştırıcılar
+
+3- Ayarlar
+   A) Intellij Editör ayarları
+      2 tane Plugin ekleyeceğiz
+        1- Cucumber for Java
+        2- Gherkin Language
+
+   B) POM.xml -> Project Object Model Ayarları
+
+       Selenium
+       testNg
+       Cucumber
+       Cucumber-TestNg birleştiren lib
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
