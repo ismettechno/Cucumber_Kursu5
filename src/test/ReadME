@@ -20,7 +20,7 @@ Maven
    A) Intellij Editör ayarları
       2 tane Plugin ekleyeceğiz
         1- Cucumber for Java
-        2- Gherkin Language
+        2- Gherkin Language  -> https://cucumber.io/docs/gherkin/reference/#keywords
 
    B) POM.xml -> Project Object Model Ayarları
 
