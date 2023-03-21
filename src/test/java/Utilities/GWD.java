@@ -8,7 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class GWD {
-    public static WebDriver driver;
+    private static WebDriver driver;
 
     public static WebDriver getDriver()
     {
@@ -16,9 +16,11 @@ public class GWD {
         logger.setLevel(Level.SEVERE);
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
 
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(options);
+        if (driver == null) { // 1 kere çalışssın
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--remote-allow-origins=*");
+            driver = new ChromeDriver(options);
+        }
 
         return driver;
     }
