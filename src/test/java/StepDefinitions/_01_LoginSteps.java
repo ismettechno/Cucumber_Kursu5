@@ -23,12 +23,15 @@ public class _01_LoginSteps {
         // System.out.println("merhaba 2");
         DialogContent dc=new DialogContent();
 
-        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.visibilityOf(dc.username));
+//        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+//        wait.until(ExpectedConditions.visibilityOf(dc.username));
+//        dc.username.sendKeys("turkeyts");
+//        dc.password.sendKeys("TechnoStudy123!");
+//        dc.loginButton.click();
 
-        dc.username.sendKeys("turkeyts");
-        dc.password.sendKeys("TechnoStudy123");
-        dc.loginButton.click();
+        dc.findAndSend(dc.username, "turkeyts");
+        dc.findAndSend(dc.password,"TechnoStudy123");
+        dc.findAndClick(dc.loginButton);
     }
 
     @Then("User should login succesfully")
