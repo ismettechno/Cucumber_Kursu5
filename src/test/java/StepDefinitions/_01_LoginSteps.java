@@ -1,19 +1,31 @@
 package StepDefinitions;
 
-import io.cucumber.java.en.*;
+import Pages.DialogContent;
+import Utilities.GWD;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class _01_LoginSteps {
-
     @Given("Navigate to Campus")
-    public void navigate_to_campus() {
-        System.out.println("merhaba selenium");
+    public void navigateToCampus() {
+        //System.out.println("merhaba 1");
+        GWD.getDriver().get("https://test.mersys.io/");
+        GWD.getDriver().manage().window().maximize();
     }
+
     @When("Enter username and password and click login button")
-    public void enter_username_and_password_and_click_login_button() {
-        System.out.println("merhaba testNG");
+    public void enterUsernameAndPasswordAndClickLoginButton() {
+        // System.out.println("merhaba 2");
+        DialogContent dc=new DialogContent();
+
+        dc.username.sendKeys("turkeyts");
+        dc.password.sendKeys("TechnoStudy123");
+        dc.loginButton.click();
     }
+
     @Then("User should login succesfully")
-    public void user_should_login_succesfully() {
-        System.out.println("merhaba cucumber");
+    public void userShouldLoginSuccesfully() {
+        System.out.println("merhaba 3");
     }
 }
