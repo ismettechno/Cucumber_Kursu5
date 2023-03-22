@@ -28,19 +28,5 @@ public class DialogContent extends Parent{
 
 
 
-    public void findAndSend(WebElement element, String yazi){
-
-        sendKeysFunction(element, yazi);
-    }
-
-
-    public void findAndClick(WebElement element){
-
-          clickFunction(element);
-    }
-
-
-
-
 
 }

@@ -28,9 +28,9 @@ public class _01_LoginSteps {
 //        dc.password.sendKeys("TechnoStudy123!");
 //        dc.loginButton.click();
 
-        dc.findAndSend(dc.username, "turkeyts");
-        dc.findAndSend(dc.password,"TechnoStudy123");
-        dc.findAndClick(dc.loginButton);
+        dc.sendKeysFunction(dc.username, "turkeyts");
+        dc.sendKeysFunction(dc.password,"TechnoStudy123");
+        dc.clickFunction(dc.loginButton);
     }
 
     @Then("User should login succesfully")
