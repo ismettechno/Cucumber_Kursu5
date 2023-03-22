@@ -12,6 +12,7 @@ import java.time.Duration;
 
 // POM : Page Object Model
 public class DialogContent extends Parent{
+   // kullanıcı ile dialogla veri alan bölümler
 
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(),this);
@@ -28,6 +29,8 @@ public class DialogContent extends Parent{
 
     @FindBy(css="span[class='mat-tooltip-trigger logo-text']")
     public WebElement txtTechnoStudy;
+
+
 
 
 }
