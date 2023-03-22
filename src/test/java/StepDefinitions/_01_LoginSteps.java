@@ -7,10 +7,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
 public class _01_LoginSteps {
+    DialogContent dc=new DialogContent();
+
     @Given("Navigate to Campus")
     public void navigateToCampus() {
         //System.out.println("merhaba 1");
@@ -20,7 +23,6 @@ public class _01_LoginSteps {
     @When("Enter username and password and click login button")
     public void enterUsernameAndPasswordAndClickLoginButton() {
         // System.out.println("merhaba 2");
-        DialogContent dc=new DialogContent();
 
 //        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
 //        wait.until(ExpectedConditions.visibilityOf(dc.username));
@@ -35,6 +37,6 @@ public class _01_LoginSteps {
 
     @Then("User should login succesfully")
     public void userShouldLoginSuccesfully() {
-        System.out.println("merhaba 3");
+        dc.verifyContainsTextFunction(dc.txtTechnoStudy,"Techno Study");
     }
 }
