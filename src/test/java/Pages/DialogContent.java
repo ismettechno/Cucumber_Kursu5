@@ -18,7 +18,7 @@ public class DialogContent extends Parent{
     }
 
     @FindBy(css = "input[formcontrolname='username']")
-    public WebElement username;
+    private WebElement username;
 
     @FindBy(css="input[formcontrolname='password']")
     public WebElement password;
@@ -27,16 +27,33 @@ public class DialogContent extends Parent{
     public WebElement loginButton;
 
 
+
+    public void findAndSend(String strElementAdi, String yazi){
+
+        //gelen isimden elementi bulmama lazım
+
+        WebElement myElement=null;
+
+        if (strElementAdi=="username")
+            myElement= username;
+
+        if (strElementAdi=="password")
+            myElement= password;
+
+
+        sendKeysFunction(myElement, yazi);
+    }
+
+
+
     public void findAndClick(WebElement element){
 
-        clickFunction(element);
+
+          clickFunction(element);
     }
 
 
-    public void findAndSend(WebElement element, String yazi){
 
-          sendKeysFunction(element, yazi);
-    }
 
 
 }

@@ -10,14 +10,15 @@ import java.time.Duration;
 
 public class Parent {
 
-    WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+    WebDriverWait wait=new WebDriverWait(GWD.getDriver(),
+            Duration.ofSeconds(30));
 
     public void sendKeysFunction(WebElement element, String yazi)
     {
-        waitUntilVisible(element);
-        scrollToElement(element);
-        element.clear();
-        element.sendKeys(yazi);
+        waitUntilVisible(element); // gözükene kadar bekle
+        scrollToElement(element);  // scroll yap
+        element.clear();           // temizle
+        element.sendKeys(yazi);    // gönder
     }
 
     public void clickFunction(WebElement element){
@@ -25,10 +26,6 @@ public class Parent {
         scrollToElement(element);
         element.click();
     }
-
-
-
-
 
     public void scrollToElement(WebElement element){
         JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();

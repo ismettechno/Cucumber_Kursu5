@@ -28,8 +28,8 @@ public class _01_LoginSteps {
 //        dc.password.sendKeys("TechnoStudy123!");
 //        dc.loginButton.click();
 
-        dc.findAndSend(dc.username, "turkeyts");
-        dc.findAndSend(dc.password,"TechnoStudy123");
+        dc.findAndSend("username", "turkeyts");
+        dc.findAndSend("password","TechnoStudy123");
         dc.findAndClick(dc.loginButton);
     }
 
