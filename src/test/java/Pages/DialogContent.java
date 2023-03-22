@@ -30,7 +30,17 @@ public class DialogContent extends Parent{
     @FindBy(css="span[class='mat-tooltip-trigger logo-text']")
     public WebElement txtTechnoStudy;
 
+    @FindBy(xpath="//ms-add-button[contains(@tooltip,'ADD')]//button")
+    public WebElement addButton;
 
+    @FindBy(xpath="//ms-text-field[@formcontrolname='name']/input")
+    public WebElement nameInput;
+
+    @FindBy(xpath="//ms-text-field[@formcontrolname='code']/input")
+    public WebElement codeInput;
+
+    @FindBy(xpath="")
+    public WebElement saveButton;
 
 
 }
