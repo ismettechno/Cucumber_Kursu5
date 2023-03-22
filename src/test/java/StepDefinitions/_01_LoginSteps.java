@@ -15,7 +15,6 @@ public class _01_LoginSteps {
     public void navigateToCampus() {
         //System.out.println("merhaba 1");
         GWD.getDriver().get("https://test.mersys.io/");
-        GWD.getDriver().manage().window().maximize();
     }
 
     @When("Enter username and password and click login button")

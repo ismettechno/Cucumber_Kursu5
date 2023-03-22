@@ -20,6 +20,7 @@ public class GWD {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--remote-allow-origins=*");
             driver = new ChromeDriver(options);
+            driver.manage().window().maximize();
         }
 
         return driver;

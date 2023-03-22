@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 // POM : Page Object Model
-public class DialogContent {
+public class DialogContent extends Parent{
 
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(),this);
@@ -28,34 +28,14 @@ public class DialogContent {
 
 
     public void findAndClick(WebElement element){
-        //tıklatılabilir olana kadar bekle
-        //scroll olana kadar bekle
-        //elemente click
 
-        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.elementToBeClickable(element));
-
-        JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
-        js.executeScript("arguments[0].scrollIntoView();", element);
-
-        element.click();
+        clickFunction(element);
     }
 
 
     public void findAndSend(WebElement element, String yazi){
-//        gözükene kadar bekle
-//        scroll olana kadra bekle
-//        içini temizle
-//        yazıyı gönder
 
-        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.visibilityOf(element));
-
-        JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
-        js.executeScript("arguments[0].scrollIntoView();", element);
-
-        element.clear();
-        element.sendKeys(yazi);
+          sendKeysFunction(element, yazi);
     }
 
 
