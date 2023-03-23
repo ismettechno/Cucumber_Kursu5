@@ -20,8 +20,8 @@ public class _02_CountrySteps {
     @When("create a country")
     public void createACountry() {
         dc.clickFunction(dc.addButton);
-        dc.sendKeysFunction(dc.nameInput, "is1Ulk112");
-        dc.sendKeysFunction(dc.codeInput, "112");
+        dc.sendKeysFunction(dc.nameInput, "i1s113Ulk112");
+        dc.sendKeysFunction(dc.codeInput, "11221");
         dc.clickFunction(dc.saveButton); // TODO
     }
 
