@@ -45,5 +45,10 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//div[contains(text(),'successfully')]")
     public WebElement successMessage;
 
+    @FindBy(xpath="//ms-text-field[@formcontrolname='shortName']/input")
+    public WebElement shortName;
+
+    @FindBy(xpath="//div[contains(text(),'already exists')]")
+    public WebElement alreadyExist;
 
 }

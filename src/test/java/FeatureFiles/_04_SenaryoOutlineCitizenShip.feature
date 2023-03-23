@@ -12,9 +12,9 @@
       And Navigate to CitizenShip page
 
     Scenario: CitizenShip create
-      When User a CitizenShip name as "isCS1" short name as "ics1"
+      When User a CitizenShip name as "isCS12" short name as "ics12"
       Then Success message should be displayed
 
-      When User a CitizenShip name as "isCS1" short name as "ics1"
+      When User a CitizenShip name as "isCS12" short name as "ics12"
       Then Already exist message should be displayed
 
