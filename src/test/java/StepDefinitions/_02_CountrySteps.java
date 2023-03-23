@@ -20,13 +20,14 @@ public class _02_CountrySteps {
     @When("create a country")
     public void createACountry() {
         dc.clickFunction(dc.addButton);
-        dc.sendKeysFunction(dc.nameInput, "isUlk1");
-        dc.sendKeysFunction(dc.codeInput, "1111");
+        dc.sendKeysFunction(dc.nameInput, "isUlk11");
+        dc.sendKeysFunction(dc.codeInput, "11111");
         dc.clickFunction(dc.saveButton); // TODO
     }
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
        // TODO
+        dc.verifyContainsTextFunction(dc.successMessage,"success");
     }
 }
