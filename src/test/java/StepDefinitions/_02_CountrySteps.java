@@ -20,8 +20,8 @@ public class _02_CountrySteps {
     @When("create a country")
     public void createACountry() {
         dc.clickFunction(dc.addButton);
-        dc.sendKeysFunction(dc.nameInput, "isUlk112");
-        dc.sendKeysFunction(dc.codeInput, "111112");
+        dc.sendKeysFunction(dc.nameInput, "is1Ulk112");
+        dc.sendKeysFunction(dc.codeInput, "112");
         dc.clickFunction(dc.saveButton); // TODO
     }
 
@@ -29,5 +29,13 @@ public class _02_CountrySteps {
     public void successMessageShouldBeDisplayed() {
        // TODO
         dc.verifyContainsTextFunction(dc.successMessage,"success");
+    }
+
+    @When("create a country name as {string} code as {string}")
+    public void createACountryNameAsCodeAs(String name, String kod) {
+        dc.clickFunction(dc.addButton);
+        dc.sendKeysFunction(dc.nameInput, name);
+        dc.sendKeysFunction(dc.codeInput, kod);
+        dc.clickFunction(dc.saveButton);
     }
 }
