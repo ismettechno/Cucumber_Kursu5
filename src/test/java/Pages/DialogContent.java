@@ -67,6 +67,11 @@ public class DialogContent extends Parent{
         sendKeysFunction(searchInput,searchText);
         clickFunction(searchButton);
         //beklet
+        //1. StaleElemetn hatası verdi : erken buldum tez kaybettim
+        //wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+
+        //fuse-progress-bar/*    bu 0 olana kadar beklet
+
         clickFunction(deleteImageBtn);
         clickFunction(deleteDialogBtn);
     }

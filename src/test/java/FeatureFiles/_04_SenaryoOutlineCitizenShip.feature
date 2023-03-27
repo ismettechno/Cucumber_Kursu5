@@ -11,7 +11,7 @@ Feature: Citizenship Functionality
     Then User should login succesfully
     And Navigate to CitizenShip page
 
- Scenario Outline: CitizenShip create
+  Scenario Outline: CitizenShip create
     When User a CitizenShip name as "<name>" short name as "<short>"
     Then Success message should be displayed
 
@@ -21,12 +21,12 @@ Feature: Citizenship Functionality
     When User delete the "<name>"
     Then Success message should be displayed
 
-   Examples:
-     | name | short |
-     | is1U3l11 | i23s111 |
-     | is1Ul12 | i2s112 |
-     | is1Ul13 | i2s113 |
-     | is1Ul14 | i2s114 |
+    Examples:
+      | name     | short   |
+      | is1U3l11 | i23s111 |
+      | is1Ul12  | i2s112  |
+      | is1Ul13  | i2s113  |
+      | is1Ul14  | i2s114  |
 
 
 
