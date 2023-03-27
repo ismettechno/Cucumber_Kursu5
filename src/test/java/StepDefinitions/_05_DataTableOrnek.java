@@ -31,8 +31,10 @@ public class _05_DataTableOrnek {
       List< List<String> > listElemanlar= elemanlar.asLists(String.class);
 
         for (int i = 0; i < listElemanlar.size(); i++) {
-            System.out.println("listElemanlar = " + listElemanlar.get(i).get(0)+" "+
-                    listElemanlar.get(i).get(1) );
+            System.out.println("listElemanlar = " +
+                    listElemanlar.get(i).get(0)+" "+ //username
+                    listElemanlar.get(i).get(1) );   // password
+            //listElemanlar.get(i).get(2)
         }
 
     }
