@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -65,12 +66,13 @@ public class DialogContent extends Parent{
 
     public void deleteItem(String searchText){
         sendKeysFunction(searchInput,searchText);
-        clickFunction(searchButton);
+        clickFunction(searchButton);   //fuse-progress-bar/*   gözüküyor
         //beklet
         //1. StaleElemetn hatası verdi : erken buldum tez kaybettim
         //wait.until(ExpectedConditions.elementToBeClickable(searchButton));
 
         //fuse-progress-bar/*    bu 0 olana kadar beklet
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));
 
         clickFunction(deleteImageBtn);
         clickFunction(deleteDialogBtn);

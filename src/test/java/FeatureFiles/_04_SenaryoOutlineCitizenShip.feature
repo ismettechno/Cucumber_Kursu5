@@ -22,11 +22,11 @@ Feature: Citizenship Functionality
     Then Success message should be displayed
 
     Examples:
-      | name     | short   |
-      | is1U3l11 | i23s111 |
-      | is1Ul12  | i2s112  |
-      | is1Ul13  | i2s113  |
-      | is1Ul14  | i2s114  |
+      | name     | short    |
+      | i7s1U111 | i273s11 |
+      | i7s1Ul12 | i72s112  |
+      | i7s1Ul13 | i72s113  |
+      | i7s1Ul14 | i72s114  |
 
 
 
