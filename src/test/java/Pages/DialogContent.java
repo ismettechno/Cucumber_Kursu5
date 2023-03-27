@@ -78,4 +78,17 @@ public class DialogContent extends Parent{
         clickFunction(deleteDialogBtn);
     }
 
+    public WebElement getWebElement(String strButton){
+
+        switch (strButton)
+        {
+            case "addButton" : return addButton;
+            case "saveButton" : return saveButton;
+            case "nameInput" : return nameInput;
+            case "codeInput" : return codeInput;
+        }
+
+        return null;
+    }
+
 }
