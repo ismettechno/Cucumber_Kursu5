@@ -15,13 +15,19 @@ Feature: DataTable Functionality
       | addButton |
 
     And User sending the keys in Dialog Content
-      | nameInput | ismetUlk1 |
+      | nameInput | ismetU1lk1 |
       | codeInput | i3434     |
 
     And Click on the element in Dialog
       | saveButton |
 
     Then Success message should be displayed
+
+    And User delete item from Dialog Content
+      | ismetU1lk1 |
+
+    Then Success message should be displayed
+
 
 
   Scenario: Create Nationality
@@ -35,13 +41,17 @@ Feature: DataTable Functionality
       | addButton |
 
     And User sending the keys in Dialog Content
-      | nameInput | ismetUlk1 |
+      | nameInput | isme1tU123lk1 |
 
     And Click on the element in Dialog
       | saveButton |
 
     Then Success message should be displayed
 
+    And User delete item from Dialog Content
+      | isme1tU123lk1 |
+
+    Then Success message should be displayed
 
 
 
