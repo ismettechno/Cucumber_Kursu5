@@ -74,6 +74,19 @@ public class DialogContent extends Parent{
     private WebElement toggleBar;
 
 
+    @FindBy(xpath="//mat-select//span[text()='Academic Period']")
+    private WebElement academicPeriod;
+
+    @FindBy(xpath="(//mat-option/span)[1]")
+    private WebElement academicPeriod1;
+
+    @FindBy(xpath="(//span[text()='Grade Level'])[1]")
+    private WebElement gradeLevel;
+
+    @FindBy(xpath="(//mat-option//span)[2]")
+    private WebElement gradeLevel2;
+
+
     public WebElement getWebElement(String strButton){
 
         switch (strButton)
@@ -85,6 +98,10 @@ public class DialogContent extends Parent{
             case "integrationCode" : return integrationCode;
             case "priorityCode" : return priorityCode;
             case "toggleBar" : return toggleBar;
+            case "academicPeriod" : return academicPeriod;
+            case "academicPeriod1" : return academicPeriod1;
+            case "gradeLevel" : return gradeLevel;
+            case "gradeLevel2" : return gradeLevel2;
         }
 
         return null;
