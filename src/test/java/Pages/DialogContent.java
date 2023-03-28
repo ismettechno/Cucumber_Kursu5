@@ -64,6 +64,35 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//button[@type='submit']")
     public WebElement deleteDialogBtn;
 
+    @FindBy(xpath="//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']//input")
+    private WebElement integrationCode;
+
+    @FindBy(xpath="//ms-integer-field[@formcontrolname='priority']/input")
+    private WebElement priorityCode;
+
+    @FindBy(xpath="//mat-slide-toggle[@formcontrolname='active']")
+    private WebElement toggleBar;
+
+
+    public WebElement getWebElement(String strButton){
+
+        switch (strButton)
+        {
+            case "addButton" : return addButton;
+            case "saveButton" : return saveButton;
+            case "nameInput" : return nameInput;
+            case "codeInput" : return codeInput;
+            case "integrationCode" : return integrationCode;
+            case "priorityCode" : return priorityCode;
+            case "toggleBar" : return toggleBar;
+        }
+
+        return null;
+    }
+
+
+
+
     public void deleteItem(String searchText){
         sendKeysFunction(searchInput,searchText);
         clickFunction(searchButton);   //fuse-progress-bar/*   gözüküyor
@@ -77,18 +106,4 @@ public class DialogContent extends Parent{
         clickFunction(deleteImageBtn);
         clickFunction(deleteDialogBtn);
     }
-
-    public WebElement getWebElement(String strButton){
-
-        switch (strButton)
-        {
-            case "addButton" : return addButton;
-            case "saveButton" : return saveButton;
-            case "nameInput" : return nameInput;
-            case "codeInput" : return codeInput;
-        }
-
-        return null;
-    }
-
 }

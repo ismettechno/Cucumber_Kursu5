@@ -16,7 +16,7 @@ Feature: DataTable Functionality
 
     And User sending the keys in Dialog Content
       | nameInput | ismetU1lk1 |
-      | codeInput | i3434     |
+      | codeInput | i3434      |
 
     And Click on the element in Dialog
       | saveButton |
@@ -27,7 +27,6 @@ Feature: DataTable Functionality
       | ismetU1lk1 |
 
     Then Success message should be displayed
-
 
 
   Scenario: Create Nationality
@@ -54,14 +53,31 @@ Feature: DataTable Functionality
     Then Success message should be displayed
 
 
+  Scenario: Fee Functionality
+    And Click on the element in LeftNav
+      | setup      |
+      | parameters |
+      | fees       |
 
+    And Click on the element in Dialog
+      | addButton |
 
+    And User sending the keys in Dialog Content
+      | nameInput       | isme1tFee1 |
+      | codeInput       | i3434     |
+      | integrationCode | 121       |
+      | priorityCode    | 122       |
 
+    And Click on the element in Dialog
+      | toggleBar  |
+      | saveButton |
 
+    Then Success message should be displayed
 
+    And User delete item from Dialog Content
+      | isme1tFee1 |
 
-
-
+    Then Success message should be displayed
 
 
 
