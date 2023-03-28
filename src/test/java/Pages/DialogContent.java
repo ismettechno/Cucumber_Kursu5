@@ -52,7 +52,7 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//div[contains(text(),'already exists')]")
     public WebElement alreadyExist;
 
-    @FindBy(xpath="(//ms-text-field/input)[1]")
+    @FindBy(xpath="//mat-form-field//input[@data-placeholder='Name']")
     public WebElement searchInput;
 
     @FindBy(xpath="//ms-search-button//button")
