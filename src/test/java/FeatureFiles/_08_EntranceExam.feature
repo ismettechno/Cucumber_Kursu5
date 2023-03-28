@@ -31,7 +31,7 @@ Feature: Exam functionality
     And Click on the element in Dialog
       | saveButton |
 
-    And Success message should be displayed
+    Then Success message should be displayed
 
     And Click on the element in LeftNav
       | entranceExamsOne |
@@ -41,4 +41,4 @@ Feature: Exam functionality
     And User delete item from Dialog Content
       | ismExam1 |
 
-    And Success message should be displayed
+    Then Success message should be displayed
