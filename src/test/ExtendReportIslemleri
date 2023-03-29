@@ -37,3 +37,19 @@ ExtendReport İşlemleri
         #screenshot folder and src settings
         screenshot.dir=test-output/screenshots/
         screenshot.rel.path=../screenshots/
+
+
+6-   Reportun PDF çıktısı için
+        https://www.programsbuzz.com/article/extent-pdf-report-cucumber-testng
+        extends.properties e aşağıdaki bölüm eklendi
+
+            #PDF Report
+            extent.reporter.pdf.start=true
+            extent.reporter.pdf.out=PdfReport.pdf
+
+7- Her raporun ayrı olması için
+   Aşağıdaki kodu extent.properties e ekliyoruz
+
+    #FolderName
+    basefolder.name=Test Reports/TestReport
+    basefolder.datetimepattern=d-MMM-YY HH.mm.ss
