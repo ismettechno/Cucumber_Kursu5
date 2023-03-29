@@ -30,7 +30,7 @@ ExtendReport İşlemleri
       if (senaryo.isFailed()){
                   TakesScreenshot ts=(TakesScreenshot) GWD.getDriver();
                   byte[] hafizadakiHali=ts.getScreenshotAs(OutputType.BYTES);
-                  senaryo.attach(hafizadakiHali, "img/png","screen shot");
+                  senaryo.attach(hafizadakiHali, "image/png","screen shot");
               }
 
   b)extends.properties e aşağıdaki bölüm eklendi
