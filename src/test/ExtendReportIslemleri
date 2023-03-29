@@ -21,3 +21,19 @@ ExtendReport İşlemleri
    extent.reporter.spark.start=true
    extent.reporter.spark.out=test-output/SparkReport/Spark.html
 
+5- Rapora Screenshot eklenmesi için
+       https://www.programsbuzz.com/article/how-add-screenshot-cucumber-extent-report-every-step
+       https://qaautomation.expert/2022/08/10/how-to-add-screenshot-to-cucumber-extentreports/
+
+  a) Hooks a aşağıdaki eklendi
+
+      if (senaryo.isFailed()){
+                  TakesScreenshot ts=(TakesScreenshot) GWD.getDriver();
+                  byte[] hafizadakiHali=ts.getScreenshotAs(OutputType.BYTES);
+                  senaryo.attach(hafizadakiHali, "img/png","screen shot");
+              }
+
+  b)extends.properties e aşağıdaki bölüm eklendi
+        #screenshot folder and src settings
+        screenshot.dir=test-output/screenshots/
+        screenshot.rel.path=../screenshots/
