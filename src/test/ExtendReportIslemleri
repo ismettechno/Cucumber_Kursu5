@@ -1,0 +1,17 @@
+ExtendReport İşlemleri
+
+1- POM Dependency Eklentisi eklenir
+
+   <dependency>
+       <groupId>tech.grasshopper</groupId>
+       <artifactId>extentreports-cucumber7-adapter</artifactId>
+       <version>1.9.2</version>
+   </dependency>
+
+2-  RunnerClass a plugin eklendi
+    plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+
+3-  public static WebDriver getDriver() {
+   // extend report türkçe bilg çalışmaması sebebiyle kondu
+     Locale.setDefault(new Locale("EN"));
+     System.setProperty("user.language", "EN");

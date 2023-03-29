@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+
+import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -12,6 +14,10 @@ public class GWD {
 
     public static WebDriver getDriver()
     {
+        // extend report türkçe bilg çalışmaması sebebiyle kondu
+        Locale.setDefault(new Locale("EN"));
+        System.setProperty("user.language", "EN");
+
         Logger logger= Logger.getLogger("");
         logger.setLevel(Level.SEVERE);
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
