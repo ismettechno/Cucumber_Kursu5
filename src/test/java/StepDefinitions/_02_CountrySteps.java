@@ -20,7 +20,7 @@ public class _02_CountrySteps {
 
     @When("create a country")
     public void createACountry() {
-        String ulkeAdi= RandomStringUtils.randomAlphanumeric(8); // 4 harf
+        String ulkeAdi= RandomStringUtils.randomAlphanumeric(8); // 8 harf
         String ulkeKodu= RandomStringUtils.randomNumeric(4); // 4 rakam
 
         dc.clickFunction(dc.addButton);
