@@ -15,3 +15,9 @@ ExtendReport İşlemleri
    // extend report türkçe bilg çalışmaması sebebiyle kondu
      Locale.setDefault(new Locale("EN"));
      System.setProperty("user.language", "EN");
+
+4- extent.properties dosyasi açılıp aşağıdaki 2 satır eklenir
+
+   extent.reporter.spark.start=true
+   extent.reporter.spark.out=test-output/SparkReport/Spark.html
+
