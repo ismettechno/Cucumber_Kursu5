@@ -9,11 +9,12 @@ import org.testng.annotations.Parameters;
 @CucumberOptions(
         tags = "@Regression",
         features = {"src/test/java/FeatureFiles"},
-        glue = {"StepDefinitions"}
+        glue = {"StepDefinitions"},
+        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 public class _08_TestRunnerParallel extends AbstractTestNGCucumberTests {
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     @Parameters("browserTipi")
     public void beforClass(String browser){
         // browser tip şu an elimde
