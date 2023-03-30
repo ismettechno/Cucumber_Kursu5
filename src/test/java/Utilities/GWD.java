@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 public class GWD {
 
     //her 1 threde özel lokal static driver oluşturdum
-    private static  ThreadLocal<WebDriver> threadDriver=new ThreadLocal<>(); //webDriver 1 , webDriver 2..
+    private static ThreadLocal<WebDriver> threadDriver=new ThreadLocal<>(); //webDriver 1 , webDriver 2..
     private static ThreadLocal<String> threadBrowserName=new ThreadLocal<>(); // chrome, firefox
 
     // threadDriver.get()  --> bulunduğum thread deki driverı ver
@@ -30,9 +30,13 @@ public class GWD {
         logger.setLevel(Level.SEVERE);
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
 
+        //diğer senaryolar için default chrome
+        if (threadBrowserName.get() == null)
+            threadBrowserName.set("chrome");
+
         if (threadDriver.get() == null) { // bu thread de driver var mı
 
-            switch (browserTipi)
+            switch (threadBrowserName.get())
             {
                 case "firefox":
                     threadDriver.set(new FirefoxDriver());
@@ -73,5 +77,8 @@ public class GWD {
         }
     }
 
+    public static void threadBrowserSet(String browser){
+        threadBrowserName.set(browser);
+    }
 
 }
