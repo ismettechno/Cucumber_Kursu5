@@ -30,7 +30,7 @@ public class GWD {
         logger.setLevel(Level.SEVERE);
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
 
-        if (threadDriver.get() == null) { // 1 kere çalışssın
+        if (threadDriver.get() == null) { // bu thread de driver var mı
 
             switch (browserTipi)
             {
@@ -50,7 +50,7 @@ public class GWD {
                     //chrome
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--remote-allow-origins=*");
-                    threadDriver.set(new ChromeDriver(options));
+                    threadDriver.set(new ChromeDriver(options));   // yoksa buraya bir tane set et
                     break;
             }
         }
