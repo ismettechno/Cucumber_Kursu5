@@ -19,7 +19,7 @@ public class _06_WriteInTheExcel {
         Sheet sheet=workbook.getSheetAt(0);
 
         // HAFIZADA işlemlere devam ediyorum.
-        Row yeniSatir= sheet.createRow(0);
+        Row yeniSatir= sheet.createRow(sheet.getPhysicalNumberOfRows());
         Cell yeniHucre=yeniSatir.createCell(0);
         yeniHucre.setCellValue("Merhaba Dünya");
 
