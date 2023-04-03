@@ -20,7 +20,7 @@ public class _03_ApachePOIStart {
         Workbook calismaKitabi= WorkbookFactory.create(dosyaOkumaBaglantisi);
 
         //istediğim isimdeki çalışma sayfasını alıyorum
-        Sheet calismaSayfasi = calismaKitabi.getSheet("Sheet1");
+        Sheet calismaSayfasi = calismaKitabi.getSheet("Sheet1"); // getSheetAt(0);
 
         //istenen Satırı alıyorum
         Row satir=calismaSayfasi.getRow(0);
