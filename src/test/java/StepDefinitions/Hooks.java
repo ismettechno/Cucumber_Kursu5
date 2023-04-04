@@ -20,9 +20,10 @@ public class Hooks {
                 senaryo, GWD.threadBrowserGet());
 
         if (senaryo.isFailed()){
-            TakesScreenshot ts=(TakesScreenshot) GWD.getDriver();
-            final byte[] hafizadakiHali=ts.getScreenshotAs(OutputType.BYTES);
-            senaryo.attach(hafizadakiHali, "image/png","screenshot name");
+            // extend report da çalışan kısım
+//            TakesScreenshot ts=(TakesScreenshot) GWD.getDriver();
+//            final byte[] hafizadakiHali=ts.getScreenshotAs(OutputType.BYTES);
+//            senaryo.attach(hafizadakiHali, "image/png","screenshot name");
         }
 
         GWD.quitDriver();
