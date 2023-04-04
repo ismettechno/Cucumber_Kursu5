@@ -1,11 +1,11 @@
 package Utilities;
 
 import io.cucumber.java.Scenario;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.*;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 public class ExcelUtility {
@@ -36,10 +36,28 @@ public class ExcelUtility {
     }
 
     public static void writeExcel(String path, Scenario senaryo, String browserName){
-
         // burada her bir senaryonun sonucu excel yazılacak
 
+        XSSFWorkbook workbook=new XSSFWorkbook();
+        XSSFSheet sheet=workbook.createSheet("campusTest");
 
+        Row yeniSatir=sheet.createRow(0);
+
+        Cell yeniHucre=yeniSatir.createCell(0);
+        yeniHucre.setCellValue(senaryo.getName());
+
+        yeniHucre = yeniSatir.createCell(1);
+        yeniHucre.setCellValue(senaryo.getStatus().toString()); // fail veya pass
+
+        //file save
+        try {
+            FileOutputStream outputStream = new FileOutputStream(path);
+            workbook.write(outputStream);
+            workbook.close();
+            outputStream.close();
+        }catch (Exception e){
+
+        }
     }
 
 
