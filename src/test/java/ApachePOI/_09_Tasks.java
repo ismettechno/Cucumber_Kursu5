@@ -21,7 +21,7 @@ public class _09_Tasks {
         Scanner oku=new Scanner(System.in);
         int columnCnt=oku.nextInt();
 
-        ArrayList< ArrayList<String> > donenSonuc=getData(path, sheetName, columnCnt);  // String[][]
+        ArrayList< ArrayList<String> > donenSonuc=getData(path, sheetName, columnCnt);
         System.out.println("donenSonuc = " + donenSonuc);
     }
 
