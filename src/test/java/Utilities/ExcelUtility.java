@@ -39,7 +39,6 @@ public class ExcelUtility {
     public static void writeExcel(String path, Scenario senaryo, String browserName) {
         // burada her bir senaryonun sonucu excel yazılacak
         File file=new File(path);
-
         // eğer dosya yok ise aşağıdaki bölüm çalışşsın
         if (!file.exists()){ // dosya yok ise
             XSSFWorkbook workbook = new XSSFWorkbook();
@@ -70,8 +69,9 @@ public class ExcelUtility {
 
             Sheet sheet=null;
             Workbook workbook =null;
+            FileInputStream inputStream=null;
             try {
-                FileInputStream inputStream = new FileInputStream(path);
+                inputStream = new FileInputStream(path);
                 workbook = WorkbookFactory.create(inputStream);
                 sheet = workbook.getSheet("campusTest");
             }catch(Exception e){
@@ -90,7 +90,8 @@ public class ExcelUtility {
 
             //file save
             try {
-                FileOutputStream outputStream = new FileOutputStream(path);
+                inputStream.close(); // okuma modu kapatıldı
+                FileOutputStream outputStream = new FileOutputStream(path); // yazma moduna geçildi
                 workbook.write(outputStream);
                 workbook.close();
                 outputStream.close();
