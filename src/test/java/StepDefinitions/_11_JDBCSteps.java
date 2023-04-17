@@ -19,7 +19,6 @@ public class _11_JDBCSteps {
         DialogContent dc=new DialogContent();
         List<WebElement> UIList= dc.nameList;
 
-
         for (int i = 0; i < dbList.size(); i++) {
             System.out.print(dbList.get(i).get(1).trim());  // 0->1   1->ümraniye
             System.out.println("\t"+UIList.get(i).getText().trim());
@@ -29,6 +28,7 @@ public class _11_JDBCSteps {
                     UIList.get(i).getText().trim()
             );
         }
+
 
     }
 }
