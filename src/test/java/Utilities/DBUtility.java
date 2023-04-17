@@ -35,6 +35,7 @@ public class DBUtility {
         return tablo;
     }
 
+
     public static void DBConnectionOpen()
     {
         String hostUrl = "jdbc:mysql://db-technostudy.ckr1jisflxpv.us-east-1.rds.amazonaws.com:3306/sakila";
