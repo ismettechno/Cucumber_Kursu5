@@ -16,7 +16,7 @@ public class _03_Soru extends JDBCParent {
         ResultSet rs= statement.executeQuery("select city from city");
 
         int rowCount=0;
-        while ( rs.next()==true ){
+        while ( rs.next() ){
             System.out.println(rs.getString("city"));
             rowCount++;
         }
