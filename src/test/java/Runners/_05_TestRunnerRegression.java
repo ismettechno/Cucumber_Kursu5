@@ -8,6 +8,7 @@ import io.cucumber.testng.CucumberOptions;
         // or yerine and yazılırsa hem smoke hem de regression tag i olanları çalıştırıyor
         features = {"src/test/java/FeatureFiles"},
         glue = {"StepDefinitions"}
+        ,plugin= {"json:target/cucumber/cucumber.json"} // Jenkins için JSON report
 )
 public class _05_TestRunnerRegression extends AbstractTestNGCucumberTests {
 }
