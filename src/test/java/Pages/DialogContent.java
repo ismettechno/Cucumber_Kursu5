@@ -23,7 +23,7 @@ public class DialogContent extends Parent{
     @FindBy(id="mat-input-0")  //@FindBy(css = "input[formcontrolname='username']")
     public WebElement username;
 
-    @FindBy(css="input[formcontrolname='password']")
+    @FindBy(id="mat-input-1")
     public WebElement password;
 
     @FindBy(css="button[aria-label='LOGIN']")
