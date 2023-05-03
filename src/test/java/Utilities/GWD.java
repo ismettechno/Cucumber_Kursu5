@@ -52,6 +52,8 @@ public class GWD {
 
                 default:
                     //chrome
+
+                    //Jenkins için Chrome memory maximize
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
                     threadDriver.set(new ChromeDriver(options));   // yoksa buraya bir tane set et

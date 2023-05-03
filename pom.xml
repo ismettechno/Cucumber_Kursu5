@@ -97,6 +97,7 @@
     </dependencies>
 
 
+    <!--  Jenkins in Çalıştırma komutunun , nereyi açlıştıracağını belirlediğimiz plugin -->
     <build>
         <plugins>
             <plugin>
@@ -118,6 +119,8 @@
             </plugin>
         </plugins>
     </build>
+
+
 
 
 </project>
